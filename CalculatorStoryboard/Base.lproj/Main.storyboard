@@ -1,24 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYY-Ko-kiT">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="IXc-4i-Urq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="nYY-Ko-kiT" customClass="ViewController" customModule="CalculatorStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KdG-yJ-pSq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="uUp-K5-rEO">
+                                <rect key="frame" x="20" y="10" width="280" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bwE-W2-FJi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-04-rgP">
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-8s-dDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="u6q-bJ-Hsh">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEj-wV-csp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="C"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEL-OB-Vbu">
+                                                        <rect key="frame" x="80.5" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="+/-"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-fL-H3O">
+                                                        <rect key="frame" x="160.5" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="%"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-yp-DXR">
+                                                        <rect key="frame" x="241" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="+"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WVZ-Dr-HNN">
+                                                <rect key="frame" x="0.0" y="102.5" width="320" height="48.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp1-EJ-RQQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="4"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="MdC-vF-SQv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqQ-6e-HMc">
+                                                        <rect key="frame" x="80" y="0.0" width="80" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="5"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="hKD-os-j6a"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJZ-Cr-dJm">
+                                                        <rect key="frame" x="160" y="0.0" width="80" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="6"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="Bl8-o6-CSS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXJ-06-idE">
+                                                        <rect key="frame" x="240" y="0.0" width="80" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="✕"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-lg-i0v">
+                                                <rect key="frame" x="0.0" y="205" width="320" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-90-Oy9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="7"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="PmR-nC-U2T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-AK-Vlp">
+                                                        <rect key="frame" x="80" y="0.0" width="80" height="48"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="8"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="1PI-kM-e3u"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdE-Kd-Lx5">
+                                                        <rect key="frame" x="160" y="0.0" width="80" height="48"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="9"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="Pbn-F2-E0L"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkM-f6-IXI">
+                                                        <rect key="frame" x="240" y="0.0" width="80" height="48"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="-"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZPF-Gt-4ez">
+                                                <rect key="frame" x="0.0" y="307" width="320" height="48.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1m-2t-bwL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="1"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="uzG-x0-PfZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5V-4P-JHt">
+                                                        <rect key="frame" x="80.5" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="2"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="wXA-7z-ieW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDT-1c-95O">
+                                                        <rect key="frame" x="160.5" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="3"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="fW3-oH-zgI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-QT-Te3">
+                                                        <rect key="frame" x="241" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="∕"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-iC-2hb">
+                                                <rect key="frame" x="0.0" y="409.5" width="320" height="48.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnO-eZ-7bn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="√"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Qw-de8">
+                                                        <rect key="frame" x="80.5" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="0"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="nYY-Ko-kiT" eventType="touchUpInside" id="wjz-96-arA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSp-hj-3an">
+                                                        <rect key="frame" x="160.5" y="0.0" width="79.5" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="."/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBY-7g-5aE">
+                                                        <rect key="frame" x="241" y="0.0" width="79" height="48.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="="/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sk8-8s-dDh" firstAttribute="leading" secondItem="gcP-04-rgP" secondAttribute="leading" id="Ho9-2V-4cF"/>
+                                    <constraint firstAttribute="trailing" secondItem="sk8-8s-dDh" secondAttribute="trailing" id="Pnm-ol-XuH"/>
+                                    <constraint firstItem="sk8-8s-dDh" firstAttribute="top" secondItem="gcP-04-rgP" secondAttribute="top" id="beX-8n-zpH"/>
+                                    <constraint firstAttribute="bottom" secondItem="sk8-8s-dDh" secondAttribute="bottom" id="wMV-AY-wUF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uUp-K5-rEO" firstAttribute="top" secondItem="BjF-1e-YyH" secondAttribute="top" constant="10" id="HT2-1W-zxY"/>
+                            <constraint firstItem="gcP-04-rgP" firstAttribute="leading" secondItem="BjF-1e-YyH" secondAttribute="leading" id="ZWR-yY-siX"/>
+                            <constraint firstItem="gcP-04-rgP" firstAttribute="trailing" secondItem="BjF-1e-YyH" secondAttribute="trailing" id="aaa-E7-EOu"/>
+                            <constraint firstItem="sk8-8s-dDh" firstAttribute="top" secondItem="uUp-K5-rEO" secondAttribute="bottom" id="l01-MX-fwD"/>
+                            <constraint firstItem="uUp-K5-rEO" firstAttribute="leading" secondItem="BjF-1e-YyH" secondAttribute="leading" constant="20" id="qrW-rc-cIS"/>
+                            <constraint firstItem="BjF-1e-YyH" firstAttribute="trailing" secondItem="uUp-K5-rEO" secondAttribute="trailing" constant="20" id="s2d-1i-kVJ"/>
+                            <constraint firstItem="gcP-04-rgP" firstAttribute="bottom" secondItem="BjF-1e-YyH" secondAttribute="bottom" id="s8T-JW-nZn"/>
+                            <constraint firstItem="gcP-04-rgP" firstAttribute="top" secondItem="uUp-K5-rEO" secondAttribute="bottom" id="wov-wG-z22"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BjF-1e-YyH"/>
                     </view>
+                    <connections>
+                        <outlet property="displayConnectLabel" destination="uUp-K5-rEO" id="hPQ-dJ-74f"/>
+                        <outlet property="displayResultLabel" destination="uUp-K5-rEO" id="VrL-tg-yVS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgQ-u4-EWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="228.75" y="160.56338028169014"/>
         </scene>
     </scenes>
 </document>
