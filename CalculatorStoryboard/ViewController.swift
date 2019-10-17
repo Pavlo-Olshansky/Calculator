@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayConnectLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     @IBOutlet weak var displayResultLabel: UILabel!
     
